@@ -1,0 +1,36 @@
+.month-card-wrap {
+    width: 23%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 2%;
+  }
+  .month-card {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+  }
+  .month-card-front, .month-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s;
+    backface-visibility: hidden;
+    border: 1px solid black
+  }
+  .month-card-back {
+    transform: rotateY(180deg);
+    display: block;
+    overflow-y: auto;
+    text-align: center;
+  }
+  .month-card:hover .month-card-front {transform: rotateY(180deg);}
+  .month-card:hover .month-card-back {transform: rotateY(360deg);}
